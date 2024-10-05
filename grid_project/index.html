@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    .container{
+      display: grid;
+      grid-template-columns: 320px 378px 50px;
+      grid-template-rows: 414px 312px 20px;
+      
+      
+    }
+
+    .rosu{
+      
+      background-color: #E72F24;
+    }
+    .gri{
+      
+      background-color: #F0F1EC;
+      grid-column: 2 / span 2;
+      border-left: 9px solid black;
+    }
+
+    .altgri, .treigri{
+      border-top: 9px solid black;
+      border-bottom: 9px solid black;
+    }
+
+    .altgri{
+      grid-area: 2 / 1 / 3 / 2;
+      background-color: #F0F1EC;
+    }
+    .treigri{
+      grid-area: 2 / 2 / 3 / 3;
+      background-color: #F0F1EC;
+      border-left: 9px solid black;
+      border-right: 9px solid black;
+    }
+
+    .dubluvertical{
+      grid-area: 2 / 3 / 4 / 4;
+      border-top: 9px solid black;
+      display: flex;
+      flex-direction: column;
+    }
+    .albastru{
+      background-color: #004592;
+      height: 130px;
+      border-bottom: 10px solid black;
+    }
+    .alb{
+      background-color: #F0F1EC;
+      height: 184px;
+    }
+
+    .griscund{
+      grid-area: 3 / 1 / 4 / 2;
+    }
+
+    .dubluorizontal{
+      border-left: 9px solid black;
+      display: flex;
+      grid-area: 3 / 2 / 4 / 3;
+    }
+    .galben{
+      background-color: #F9D01E;
+      width: 181px;
+      border-right: 9px solid black;
+    }
+    .negru{
+      background-color: #232629;
+      border-right: 9px solid black;
+      width: 171px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Write your HTML here -->
+   <div class="container">
+    <div class="child rosu"></div>
+    <div class="child gri"></div>
+    <div class="child altgri"></div>
+    <div class="child treigri"></div>
+    <div class="child dubluvertical">
+      <div  class="albastru"></div>
+      <div class="alb"></div>
+    </div>
+    <div class="child griscund"></div>
+    <div class="child dubluorizontal">
+      <div class="galben"></div>
+      <div class="negru"></div>
+    </div>
+   </div>
+</body>
+
+</html>
